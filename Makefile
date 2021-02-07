@@ -2,10 +2,10 @@
 TARGET = main
 
 # The chip model
-MCU = STM32F042K6T6
+MCU = STM32F042K6T7
 
-ifeq ($(MCU), STM32F042K6T6)
-	MCU_FILES = STM32F042K6T6
+ifeq ($(MCU), STM32F042K6T7)
+	MCU_FILES = STM32F042K6T7
 	MCU_CLASS = F0
 	MCU_DEF   = STM32F042x6
 	IMG_START = 0x08000000
@@ -21,7 +21,7 @@ else ifeq ($(MCU_CLASS), L0)
 endif
 
 # Toolchain definitions (ARM bare metal defaults)
-TOOLCHAIN = /usr/local
+TOOLCHAIN = /usr
 CC = $(TOOLCHAIN)/bin/arm-none-eabi-gcc
 AS = $(TOOLCHAIN)/bin/arm-none-eabi-as
 LD = $(TOOLCHAIN)/bin/arm-none-eabi-ld
